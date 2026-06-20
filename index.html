@@ -6,13 +6,11 @@
   <title>宋晨瑋的個人網站</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* 深色模式樣式 - 終極暴力覆蓋版 */
     body.dark-mode { 
       background-color: #212529 !important; 
       color: #f8f9fa !important; 
     }
     
-    /* 強制所有白底區塊變深灰 */
     body.dark-mode .bg-light, 
     body.dark-mode .card, 
     body.dark-mode .bg-white,
@@ -24,7 +22,6 @@
       border-color: #495057 !important;
     }
     
-    /* 強制覆蓋文字顏色，避免黑底黑字 */
     body.dark-mode .text-dark, 
     body.dark-mode .text-muted, 
     body.dark-mode .text-secondary {
@@ -34,7 +31,6 @@
       color: #ffffff !important;
     }
     
-    /* 原有樣式 */
     section { padding: 60px 0; }
     .bg-light-gray { background-color: #f8f9fa; }
   </style>
@@ -54,7 +50,6 @@
           <li class="nav-item"><a class="nav-link" href="#experience">專案作品</a></li>
           <li class="nav-item"><a class="nav-link" href="#articles">專業見解</a></li>
         </ul>
-        <!-- 深色模式切換按鈕 -->
         <button id="theme-toggle" class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0">🌙 深色模式</button>
       </div>
     </div>
@@ -261,14 +256,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
-    // 深色模式切換邏輯
     const themeToggleBtn = document.getElementById('theme-toggle');
     
     themeToggleBtn.addEventListener('click', function() {
-      // 切換 body 的 dark-mode class
       document.body.classList.toggle('dark-mode');
       
-      // 判斷目前狀態來更改按鈕文字
       if (document.body.classList.contains('dark-mode')) {
         this.textContent = '☀️ 淺色模式';
         this.classList.replace('btn-outline-light', 'btn-outline-warning');
